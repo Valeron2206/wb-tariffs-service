@@ -112,7 +112,6 @@ cp config/config.example.json config/config.json
         "project_id": "ваш-project-id",
         "private_key": "-----BEGIN PRIVATE KEY-----\nВАШ_ПРИВАТНЫЙ_КЛЮЧ\n-----END PRIVATE KEY-----\n",
         "client_email": "service-account@project.iam.gserviceaccount.com",
-        ...
       }
     }
   ],
