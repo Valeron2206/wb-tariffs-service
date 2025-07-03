@@ -1,0 +1,66 @@
+{
+  "name": "wb-tariffs-service",
+  "version": "1.0.0",
+  "description": "Service for collecting WB tariffs and updating Google Sheets",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "migrate": "knex migrate:latest",
+    "migrate:rollback": "knex migrate:rollback",
+    "migrate:make": "knex migrate:make",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "echo \"No linter configured\"",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "wildberries",
+    "tariffs",
+    "google-sheets",
+    "postgresql",
+    "docker",
+    "typescript",
+    "node.js",
+    "cron",
+    "api-integration"
+  ],
+  "author": "Valery Khalikov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Valeron2206/wb-tariffs-service.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Valeron2206/wb-tariffs-service/issues"
+  },
+  "homepage": "https://github.com/Valeron2206/wb-tariffs-service#readme",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.5",
+    "googleapis": "^129.0.0",
+    "knex": "^3.1.0",
+    "node-cron": "^3.0.3",
+    "pg": "^8.11.3",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/node-cron": "^3.0.11",
+    "@types/pg": "^8.11.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  },
+  "optionalDependencies": {},
+  "peerDependencies": {},
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "wb": {
+    "apiKey": "YOUR_WB_API_KEY_HERE",
+    "baseUrl": "https://common-api.wildberries.ru",
+    "tariffEndpoint": "/api/v1/tariffs/box"
+  },
+  "database": {
+    "host": "postgres",
+    "port": 5432,
+    "database": "postgres",
+    "user": "postgres",
+    "password": "postgres"
+  },
+  "googleSheets": [
+    {
+      "spreadsheetId": "YOUR_GOOGLE_SHEET_ID_HERE",
+      "range": "stocks_coefs!A1:H",
+      "credentials": {
+        "type": "service_account",
+        "project_id": "your-project-id",
+        "private_key_id": "your-private-key-id",
+        "private_key": "-----BEGIN PRIVATE KEY-----\nYOUR_PRIVATE_KEY_HERE\n-----END PRIVATE KEY-----\n",
+        "client_email": "your-service-account@your-project-id.iam.gserviceaccount.com",
+        "client_id": "your-client-id",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/your-service-account%40your-project-id.iam.gserviceaccount.com"
+      }
+    }
+  ],
+  "scheduler": {
+    "fetchTariffs": "0 * * * *",
+    "updateSheets": "0 9 * * *"
+  }
+}
